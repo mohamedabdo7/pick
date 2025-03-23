@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 // export const metadata = {
 //   title: "Terms & Conditions | Pick",
@@ -29,14 +27,14 @@ const TermsAndConditionsPage: React.FC = () => {
         <div className="prose max-w-none">
           <p className="text-gray-600">
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularized in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularized in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -44,11 +42,11 @@ const TermsAndConditionsPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -56,19 +54,19 @@ const TermsAndConditionsPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
           <p className="mt-4">
             To use certain features of the Service, you must register for an
-            account with Pick ("Pick Account") and provide certain information
-            about yourself as prompted by the registration form. You represent
-            and warrant that: (a) all required registration information you
-            submit is truthful and accurate; and (b) you will maintain the
-            accuracy of such information.
+            account with Pick (&quot;Pick Account&quot;) and provide certain
+            information about yourself as prompted by the registration form. You
+            represent and warrant that: (a) all required registration
+            information you submit is truthful and accurate; and (b) you will
+            maintain the accuracy of such information.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -76,11 +74,11 @@ const TermsAndConditionsPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -88,11 +86,11 @@ const TermsAndConditionsPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -100,11 +98,11 @@ const TermsAndConditionsPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">6. Contact Us</h2>

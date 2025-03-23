@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 // export const metadata = {
 //   title: "Privacy Policy | Pick",
@@ -30,24 +28,24 @@ const PrivacyPolicyPage: React.FC = () => {
         <div className="prose max-w-none">
           <p className="text-gray-600">
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularized in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularized in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -55,11 +53,11 @@ const PrivacyPolicyPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -67,11 +65,11 @@ const PrivacyPolicyPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -79,11 +77,11 @@ const PrivacyPolicyPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">
@@ -91,11 +89,11 @@ const PrivacyPolicyPage: React.FC = () => {
           </h2>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            industry. Lorem ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">6. Contact Us</h2>

@@ -2,7 +2,6 @@
 // components/sections/Hero.tsx
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
