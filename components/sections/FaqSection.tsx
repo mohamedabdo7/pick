@@ -51,26 +51,28 @@ const FaqSection: React.FC = () => {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 4);
 
   return (
-    <div className="w-full bg-gray-900 py-16 px-4 md:px-8">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+    <div className="w-full bg-gray-900 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+      <div className="max-w-xl sm:max-w-2xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-6 sm:mb-8 md:mb-12">
           Got <span className="text-emerald-400">Questions?</span>
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {displayedFaqs.map((faq) => (
             <div
               key={faq.id}
-              className="rounded-lg overflow-hidden transition-all duration-300"
+              className="rounded-lg overflow-hidden transition-all duration-300 border border-gray-700"
             >
               <button
-                className="w-full px-6 py-4 flex justify-between items-center bg-gray-800 hover:bg-gray-700 text-white text-left"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center bg-gray-800 hover:bg-gray-700 text-white text-left"
                 onClick={() => toggleFaq(faq.id)}
                 aria-expanded={faq.isOpen}
               >
-                <span className="font-medium">{faq.question}</span>
+                <span className="font-medium text-sm sm:text-base">
+                  {faq.question}
+                </span>
                 <svg
-                  className={`w-5 h-5 text-emerald-400 transform transition-transform duration-300 ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 transform transition-transform duration-300 flex-shrink-0 ml-2 ${
                     faq.isOpen ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -87,7 +89,7 @@ const FaqSection: React.FC = () => {
               </button>
 
               {faq.isOpen && (
-                <div className="px-6 py-4 bg-gray-800 text-gray-300">
+                <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 text-gray-300 text-sm sm:text-base">
                   <p>{faq.answer}</p>
                 </div>
               )}
@@ -95,14 +97,16 @@ const FaqSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-6 sm:mt-8 text-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="inline-flex items-center justify-center bg-emerald-400 hover:bg-emerald-500 text-white font-medium rounded-full px-8 py-2.5 min-w-[140px]"
+            className="inline-flex items-center justify-center bg-emerald-400 hover:bg-emerald-500 text-white font-medium rounded-full px-5 sm:px-8 py-2 sm:py-2.5 text-sm sm:text-base min-w-[120px] sm:min-w-[140px] transition-colors duration-200"
           >
-            <span>View More</span>
+            <span>{showAll ? "View Less" : "View More"}</span>
             <svg
-              className="w-4 h-4 ml-2"
+              className={`w-3 h-3 sm:w-4 sm:h-4 ml-2 transform transition-transform duration-300 ${
+                showAll ? "rotate-180" : ""
+              }`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
