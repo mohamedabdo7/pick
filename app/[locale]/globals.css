@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme variables (for dark sections) */
+    --background: 215 25% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 160 92% 50%;
+    --primary-foreground: 215 25% 10%;
+
+    --secondary: 215 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 30% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 160 92% 50%;
+
+    --radius: 0.5rem;
+
+    /* Light theme variables (for light sections) */
+    --light-background: 0 0% 100%;
+    --light-foreground: 215 25% 10%;
+
+    --light-card: 0 0% 98%;
+    --light-card-foreground: 215 25% 10%;
+
+    --light-border: 215 20% 85%;
+    --light-input: 215 20% 85%;
+  }
+
+  * {
+    @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Utility classes for section backgrounds */
+  .bg-section-dark {
+    @apply bg-background text-foreground;
+  }
+
+  .bg-section-light {
+    background-color: hsl(var(--light-background));
+    color: hsl(var(--light-foreground));
+  }
+
+  /* Button variants */
+  .pick-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2;
+  }
+
+  .pick-button-outline {
+    @apply border border-primary text-primary bg-transparent hover:bg-primary/10 rounded-md px-4 py-2;
+  }
+
+  /* Hero section gradient */
+  .hero-gradient {
+    background: linear-gradient(90deg, #1e1e2e 0%, #1e3e2e 100%);
+  }
+
+  /* Improve scroll behavior */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .snap-y {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-center {
+    scroll-snap-align: center;
+  }
+
+  .scroll-pt-header {
+    scroll-padding-top: 5rem; /* Adjust based on your header height */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Container width control */
+  .container-fluid {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container-narrow {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Remove container padding from main content */
+main {
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure gradient fully covers the screen without any edges */
+.bg-gradient-to-r {
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+/* Responsive container sizing */
+@media (max-width: 640px) {
+  .container,
+  .container-narrow,
+  .container-fluid {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .container,
+  .container-narrow {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container,
+  .container-narrow {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1400px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .container-narrow {
+    max-width: 1200px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Improved scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(105, 248, 201, 0.5);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 155, 155, 0.8);
+}
+
+/* Enable smooth scrolling but disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* Add these custom animations to your globals.css file */
+
+/* Define animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+/* Stagger delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Scroll behavior utilities */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Hide scrollbar for a cleaner look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Parallax effect for background elements */
+.parallax {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.3, 1);
+}
