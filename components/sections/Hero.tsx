@@ -190,10 +190,6 @@ export default function HeroSection() {
                 <br />
                 and see what all the fun is about.
               </h3>
-
-              <Button className="rounded-full bg-emerald-400 hover:bg-emerald-500 text-black font-medium px-6 py-2 h-10">
-                Download Now
-              </Button>
             </div>
           </div>
         </div>
