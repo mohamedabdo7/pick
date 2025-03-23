@@ -3,10 +3,10 @@ import FaqSection from "@/components/sections/FaqSection";
 import HeroSection from "@/components/sections/Hero";
 import MerchantSection from "@/components/sections/MerchantSection";
 import AppPromoComponent from "@/components/sections/Promo";
-import { getI18n } from "@/locales/server";
+// import { getI18n } from "@/locales/server";
 
 export default async function Home() {
-  const t = await getI18n();
+  // const t = await getI18n();
 
   return (
     <>

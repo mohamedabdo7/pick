@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface SocialMediaLink {
@@ -103,20 +105,27 @@ const FooterSection: React.FC = () => {
           <div className="mb-8 md:mb-0">
             {/* Logo */}
             <div className="mb-5 relative w-32 h-12">
-              <img
+              {/* <img
                 src="/images/logo.svg"
                 alt="PICK Logo"
+                className="w-full h-full object-contain"
+              /> */}
+              <Image
+                src="/images/logo.svg"
+                alt="PICK Logo"
+                width={128} // Adjust width as needed
+                height={48} // Adjust height as needed
                 className="w-full h-full object-contain"
               />
             </div>
 
             {/* Contact */}
-            <a
+            <Link
               href="/contact"
               className="inline-block text-sm text-gray-300 hover:text-white transition-colors mb-5"
             >
               Contact with us
-            </a>
+            </Link>
 
             {/* Social Media Icons - in 2 rows of 3 */}
             <div className="grid grid-cols-3 gap-3 max-w-[160px]">
@@ -135,18 +144,19 @@ const FooterSection: React.FC = () => {
 
           {/* Right Side */}
           <div className="text-right  flex flex-col justify-center items-center  ">
-            <a
+            <Link
               href="/privacy"
               className="block text-sm text-white hover:text-gray-300 transition-colors mb-2"
             >
               Privacy Policy
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="/terms"
               className="block text-sm text-white hover:text-gray-300 transition-colors"
             >
               Terms & Conditions
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -74,7 +74,7 @@ const MerchantSection: React.FC = () => {
       <div className="px-48 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto relative">
         {products.map((product: Product, index) => (
           <div
-            key={product.id}
+            key={product.id + index}
             className="rounded-lg overflow-hidden bg-white z-10"
           >
             {/* Product Image */}

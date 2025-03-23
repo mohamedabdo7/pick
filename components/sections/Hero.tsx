@@ -18,8 +18,11 @@ export default function HeroSection() {
   ];
 
   // Create refs for each video element with proper typing
-  const videoRefs = useRef<React.RefObject<HTMLVideoElement>[]>(
-    videos.map(() => React.createRef<any>())
+  // const videoRefs = useRef<React.RefObject<HTMLVideoElement>[]>(
+  //   videos.map(() => React.createRef<any>())
+  // );
+  const videoRefs = useRef<Array<React.RefObject<HTMLVideoElement>>>(
+    videos.map(() => React.createRef<HTMLVideoElement>())
   );
 
   // Function to control video playback
@@ -175,7 +178,7 @@ export default function HeroSection() {
             {/* Description */}
             <p className="text-gray-300 text-base md:text-lg mt-4 max-w-lg">
               Welcome to the Pick Side! Where social meets shopping, and trust
-              takes center stage. Pick isn't just an app - it's a
+              takes center stage. Pick isn&apos;t just an app - it&apos;s a
               community-powered platform where creativity thrives and trust
               fuels every interaction.
             </p>
