@@ -16,7 +16,8 @@ export default function LanguageSwitcher() {
     try {
       // Toggle between "en" and "ar"
       const newLocale = isEnglish ? "ar" : "en";
-      (changeLocaleFn as Function)(newLocale);
+      // Type-safe approach: Define explicit function signature instead of using generic Function type
+      (changeLocaleFn as (locale: string) => void)(newLocale);
     } catch (error) {
       console.error("Error changing language:", error);
     }
