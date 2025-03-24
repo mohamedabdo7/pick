@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { useI18n } from "@/locales/client";
+import { useParams } from "next/navigation";
 
 interface FaqItem {
   id: number;
@@ -9,33 +11,33 @@ interface FaqItem {
 }
 
 const FaqSection: React.FC = () => {
+  const t = useI18n();
+  const params = useParams();
+  const isRTL = params.locale === "ar";
+
   const [faqs, setFaqs] = useState<FaqItem[]>([
     {
       id: 1,
-      question: "How does Pick work?",
-      answer:
-        "Pick is a platform that allows you to watch, record, and earn rewards by engaging with content. Simply download the app, create an account, and start browsing content or creating your own to earn rewards.",
+      question: t("faq.questions.howItWorks.question"),
+      answer: t("faq.questions.howItWorks.answer"),
       isOpen: false,
     },
     {
       id: 2,
-      question: "How do I download the Pick app?",
-      answer:
-        "You can download the Pick app from the App Store for iOS devices or from Google Play Store for Android devices. Simply search for 'Pick' and look for our logo, then tap 'Download' or 'Install'.",
+      question: t("faq.questions.download.question"),
+      answer: t("faq.questions.download.answer"),
       isOpen: true,
     },
     {
       id: 3,
-      question: "What kind of rewards can I get?",
-      answer:
-        "Pick offers various rewards including cashback, discount coupons, exclusive access to premium content, and special promotions with our partners. The more you engage with the platform, the more rewards you can earn.",
+      question: t("faq.questions.rewards.question"),
+      answer: t("faq.questions.rewards.answer"),
       isOpen: false,
     },
     {
       id: 4,
-      question: "Can I invite my friends?",
-      answer:
-        "Yes! Pick has a referral program that allows you to invite friends. When they join using your referral code, both you and your friend receive special bonuses and rewards.",
+      question: t("faq.questions.invite.question"),
+      answer: t("faq.questions.invite.answer"),
       isOpen: false,
     },
   ]);
@@ -51,10 +53,14 @@ const FaqSection: React.FC = () => {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 4);
 
   return (
-    <div className="w-full bg-gray-900 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+    <div
+      className="w-full bg-gray-900 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8"
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       <div className="max-w-xl sm:max-w-2xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-6 sm:mb-8 md:mb-12">
-          Got <span className="text-emerald-400">Questions?</span>
+          {t("faq.got")}{" "}
+          <span className="text-emerald-400">{t("faq.questions.title")}</span>
         </h2>
 
         <div className="space-y-3 sm:space-y-4">
@@ -72,9 +78,9 @@ const FaqSection: React.FC = () => {
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 transform transition-transform duration-300 flex-shrink-0 ml-2 ${
-                    faq.isOpen ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 transform transition-transform duration-300 flex-shrink-0 ${
+                    isRTL ? "mr-2" : "ml-2"
+                  } ${faq.isOpen ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -102,9 +108,11 @@ const FaqSection: React.FC = () => {
             onClick={() => setShowAll(!showAll)}
             className="inline-flex items-center justify-center bg-emerald-400 hover:bg-emerald-500 text-white font-medium rounded-full px-5 sm:px-8 py-2 sm:py-2.5 text-sm sm:text-base min-w-[120px] sm:min-w-[140px] transition-colors duration-200"
           >
-            <span>{showAll ? "View Less" : "View More"}</span>
+            <span>{showAll ? t("faq.viewLess") : t("faq.viewMore")}</span>
             <svg
-              className={`w-3 h-3 sm:w-4 sm:h-4 ml-2 transform transition-transform duration-300 ${
+              className={`w-3 h-3 sm:w-4 sm:h-4 ${
+                isRTL ? "mr-2" : "ml-2"
+              } transform transition-transform duration-300 ${
                 showAll ? "rotate-180" : ""
               }`}
               fill="none"

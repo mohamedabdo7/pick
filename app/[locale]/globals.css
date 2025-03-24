@@ -2,6 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import the English Montserrat font from Google */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Import the Arabic Montserrat fonts */
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ Regular\ 400.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ Light\ 300.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ Medium\ 500.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ SemiBold\ 600.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ Bold\ 700.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ ExtraBold\ 800.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: url("../../public/fonts/Montserrat-Arabic\ Black\ 900.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Dark theme variables (for dark sections) */
@@ -51,9 +118,41 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Font family based on language */
+  html[lang="en"] body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  html[lang="ar"] body {
+    font-family: "Montserrat-Arabic", sans-serif;
+  }
+
+  /* Additional Arabic typography adjustments */
+  html[lang="ar"] {
+    line-height: 1.6;
+  }
 }
 
 @layer utilities {
+  /* Language-specific font utility classes */
+  .font-en {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .font-ar {
+    font-family: "Montserrat-Arabic", sans-serif;
+  }
+
+  /* RTL/LTR direction utilities */
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+
   /* Utility classes for section backgrounds */
   .bg-section-dark {
     @apply bg-background text-foreground;
