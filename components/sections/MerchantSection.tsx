@@ -76,7 +76,7 @@ const MerchantSection: React.FC = () => {
     },
     {
       id: 4,
-      image: "/images/product3.png",
+      image: "/images/product4.png",
       likes: "1.7k",
       cart: "4",
       productName: isRTL ? t("merchant.productName") : "Product Name",
